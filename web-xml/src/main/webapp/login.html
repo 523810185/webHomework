@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Login Page</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="icon" href="./img/logo.jfif" type="image/x-icon"/>
+    <link rel="stylesheet" type="text/css" media="screen" href="./css/login.css" />
+    <script src="./js/jquery-3.3.1.min.js"></script>
+</head>
+<body>
+    <div id="main-div">
+        <div id="logo">
+            <img src="./img/logo.jfif"/>
+        </div>
+        <hr>
+        <div id="count">
+            <input type="text" name="" id="username" placeholder="账号">
+            <input type="text" name="" id="password" placeholder="密码">
+            <input type="text" id ="input" value="" />  
+            <input type="button" id ="code" onclick="createCode()"/>  
+            <input type="button" id ="verify" value="登入" onclick="validate()"/>
+            <input type="button" id ="regist" value="注册" onclick="register()"/>
+        </div>
+    </div>
+
+    <script src="./js/login.js"></script>
+</body>
+</html>

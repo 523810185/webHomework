@@ -1,0 +1,67 @@
+@charset "utf-8";
+body {
+    background-image: url("../img/login-background.jpg");
+    background-size: 100%;
+}
+
+#main-div {
+    width: 400px;
+    height: 325px;
+    background-color: rgba(218, 218, 218, 0.5);
+    margin: 200px auto;
+}
+
+#main-div #logo {
+    width: 400px;
+    height: 100px;
+    padding-left: calc(50% - 50px);
+}
+
+#main-div #logo img {
+    height: 100%;
+}
+
+#main-div #count {
+    width: 400px;
+    height: 225px;
+}
+
+#main-div #count input {
+    height: 40px;
+    width: 340px;
+    margin: 10px;
+}
+
+#main-div #count #input {
+    height: 40px;
+    width: 80px;
+    margin: 5px;
+    margin-left: 10px;
+}
+
+#main-div #count #verify {
+    height: 40px;
+    width: 70px;
+    margin: 5px;
+}
+
+#main-div #count #code {
+    height: 40px;
+    width: 84px;
+    margin: 5px;
+}
+
+#main-div #count #code{  
+    font-family:Arial;  
+    font-style:italic;  
+    font-weight:bold;  
+    border:0;  
+    letter-spacing:2px;  
+    color:blue;  
+}
+
+#main-div #count #regist {
+    height: 40px;
+    width: 60px;
+    margin: 5px;
+}

@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Main Page</title>
+    <link rel="icon" href="./img/logo.jfif" type="image/x-icon"/>
+    <link rel="stylesheet" type="text/css" media="screen" href="./tripartite-plug-in/bootstrap3/css/bootstrap.min.css" />
+    <link rel="stylesheet" type="text/css" media="screen" href="./tripartite-plug-in/bootstrap3/css/bootstrap-theme.min.css" />
+    <link rel="stylesheet" type="text/css" media="screen" href="./css/main.css" />
+    <script src="./js/jquery-3.3.1.min.js"></script>
+</head>
+<body>
+    <div class="navbar navbar-inverse navbar-fixed-bottom" id="top">
+        <nav class="navbar navbar-default navbar-fixed-top">
+            <div>
+                <img src="./img/logo.jfif" width="50px">
+            </div>
+            <div class="container text-right" style="line-height:50px;">
+                <span id="timeShow">2018</span>
+                你好，<span id="myUserName">admin</span>，欢迎登陆&emsp;&emsp;<a href="./login.html">退出</a>
+            </div>
+        </nav>
+    </div>
+
+    <div id="main">
+        <div id="menu">
+最近无新公告
+        </div>
+        <div id="body">
+            <br><br>
+            <div id="query">
+                <div class="input-group">
+                    <span class="input-group-addon" id="userID">学号</span>
+                    <input type="text" class="form-control" placeholder="Username" aria-describedby="basic-addon1">
+                </div>
+                <div class="input-group">
+                    <span class="input-group-addon" id="userName">学生姓名</span>
+                    <input type="text" class="form-control" placeholder="Username" aria-describedby="basic-addon1">
+                </div>
+                <div style="display:flex;">
+                    <label for="status" style="width: 100px; line-height: 40px; font-size: 16px;">学生状态</label>
+                    <select class="form-control" id="status">
+                        <option>启用</option>
+                        <option>禁用</option>
+                        <option>黑名单</option>
+                    </select>
+                </div>
+                <div style="display:flex;">
+                    <label for="channel" style="width: 100px; line-height: 40px; font-size: 16px;">注册通道</label>
+                    <select class="form-control" id="channel">
+                        <option>pc端</option>
+                        <option>微信公众号端</option>
+                    </select>
+                </div>
+            </div>
+            <div id="query2">
+                <div class="input-group">
+                    <span class="input-group-addon" id="createTimeUp">创建起始</span>
+                    <input type="text" class="form-control" placeholder="Username" aria-describedby="basic-addon1">
+                </div>
+                <div class="input-group">
+                    <span class="input-group-addon" id="createTimeDown">创建截止</span>
+                    <input type="text" class="form-control" placeholder="Username" aria-describedby="basic-addon1">
+                </div>
+                <div class="btn-group" role="group" aria-label="...">
+                    <button type="button" class="btn btn-success" onclick="onQueryBtnHandler()">查询</button>
+                </div>
+                <div class="btn-group" role="group" aria-label="...">
+                    <button type="button" class="btn btn-danger">取消</button>
+                </div>
+            </div>
+            <div id="query3">
+                <div class="btn-group" role="group" aria-label="...">
+                    <button type="button" class="btn btn-default">更改状态</button>
+                </div>
+                <div class="btn-group" role="group" aria-label="...">
+                    <button type="button" class="btn btn-default">重置密码</button>
+                </div>
+                <div class="btn-group" role="group" aria-label="...">
+                    <button type="button" class="btn btn-default">新建..</button>
+                </div>
+            </div>
+            <br><br><br><br>
+            <div >
+                    <table class="table table-hover" id="table">
+                        <thead>
+                            <tr>
+                                <td>&emsp;&emsp;</td>
+                                <td>学生学号</td>
+                                <td>学生姓名</td>
+                                <td>所属学院</td>
+                                <td>所属部门</td>
+                                <td>专业名称</td>
+                                <td>注册通道</td>
+                                <td>创建时间</td>
+                                <td>更新时间</td>
+                                <td>学生状态</td>
+                                <td>操&emsp;&emsp;作</td>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>
+                                    <div class="radio">
+                                        <label>
+                                            <input type="checkbox" name="optionsRadios" id="optionsRadios1" value="option1">
+                                        </label>
+                                    </div>
+                                </td>
+                                <td>2015329620066</td>
+                                <td>张子扬</td>
+                                <td>信息学院</td>
+                                <td>计算机科学与技术</td>
+                                <td>计算机科学与技术</td>
+                                <td>PC端</td>
+                                <td>2018-11-19 17:20:39</td>
+                                <td>2018-11-19 17:20:39</td>
+                                <td>启动</td>
+                                <td><a href="">详&emsp;&emsp;情</a></td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <div class="radio">
+                                        <label>
+                                            <input type="checkbox" name="optionsRadios" id="optionsRadios1" value="option1">
+                                        </label>
+                                    </div>
+                                </td>
+                                <td>2015329620066</td>
+                                <td>zzy</td>
+                                <td>信息学院</td>
+                                <td>计算机科学与技术</td>
+                                <td>计算机科学与技术</td>
+                                <td>PC端</td>
+                                <td>2018-11-19 17:20:39</td>
+                                <td>2018-11-19 17:20:39</td>
+                                <td>启动</td>
+                                <td><a href="">详&emsp;&emsp;情</a></td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <div class="radio">
+                                        <label>
+                                            <input type="checkbox" name="optionsRadios" id="optionsRadios1" value="option1">
+                                        </label>
+                                    </div>
+                                </td>
+                                <td>2015329620066</td>
+                                <td>zzy</td>
+                                <td>信息学院</td>
+                                <td>计算机科学与技术</td>
+                                <td>计算机科学与技术</td>
+                                <td>PC端</td>
+                                <td>2018-11-19 17:20:39</td>
+                                <td>2018-11-19 17:20:39</td>
+                                <td>启动</td>
+                                <td><a href="">详&emsp;&emsp;情</a></td>
+                            </tr>
+                        </tbody>
+                    </table>
+            </div>
+            <div id="page">
+                <nav aria-label="...">
+                    <ul class="pager">
+                        <li><a href="#">首页</a></li>
+                    </ul>
+                </nav>
+                <nav aria-label="Page navigation">
+                    <ul class="pagination">
+                        <li>
+                        <a href="#" aria-label="Previous">
+                            <span aria-hidden="true">&laquo;</span>
+                        </a>
+                        </li>
+                        <li><a href="#">1</a></li>
+                        <li><a href="#">2</a></li>
+                        <li><a href="#">3</a></li>
+                        <li><a href="#">4</a></li>
+                        <li><a href="#">5</a></li>
+                        <li>
+                        <a href="#" aria-label="Next">
+                            <span aria-hidden="true">&raquo;</span>
+                        </a>
+                        </li>
+                    </ul>
+                </nav>
+                <nav aria-label="...">
+                    <ul class="pager">
+                        <li><a href="#">尾页</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+    </div>
+
+    <script src="./js/main.js"></script>
+</body>
+</html>
